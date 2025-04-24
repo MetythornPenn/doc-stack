@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  mkdocs:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "9200:7000"
+    volumes:
+      - .:/docs
